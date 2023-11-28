@@ -92,3 +92,27 @@ if (iconMenu) {
 
 
 animationScroll();
+
+function openVideo(numberVideo)
+{
+    switch(numberVideo){
+        case 1:
+            document.getElementById("container_video1").style.display = 'flex';
+            break;
+        case 2:
+            document.getElementById("container_video2").style.display = 'flex';
+            break;   
+    }
+}
+
+function closeVideo(numberVideo)
+{
+    switch(numberVideo){
+        case 1:
+            document.getElementById("container_video1").style.display = 'none';
+            break;
+        case 2:
+            document.getElementById("container_video2").style.display = 'none';
+            break;   
+    }
+}
