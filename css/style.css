@@ -2,18 +2,7 @@
   font-family: 'TypedepotCorsaGroteskRegular';
   src: url(../fonts/TypedepotCorsaGroteskRegular.otf);
 }
-/* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&display=swap");
-*,
-*::before,
-*::after {
-box-sizing: border-box; }
 
-/*smooth scroll*/
-/* html{
-scroll-behavior: smooth;
-} */
-/* Remove default padding */
 ul[class],
 ol[class] {
 padding: 0; }
@@ -75,11 +64,6 @@ transition: .6s all;
 position: relative;
 }
 
-/* a.header-menu__link:hover{
-opacity: 1;
-text-shadow: 0 0 40px rgba(12, 21, 101, 0.9);
-color: rgba(126, 138, 247, 0.9);
-} */
 a.header-menu__link::after { 
 content: "";
 position: absolute;
@@ -97,16 +81,7 @@ a.header-menu__link:hover::after {
 width: 100%; 
 left: 0; 
 }
-/* Make images easier to work with */
-img {
-max-width: 100%;
-display: block; }
 
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-margin-top: 1em; }
-
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -139,48 +114,53 @@ padding: 0; }
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important; } }
 
-img.logo-img__SGTY
-{
-margin-top: 3px;
-}
+
 .parallax {
 color: #fff;
 background-image: url(../images/image.png);
 background-size: cover;
 background-attachment: fixed;
 height: 100%; }
+
 .parallax__header {
   display: flex;
   padding: 30px 0px;
   justify-content: space-between; }
+
   .parallax__header-menu__logo {
     display: flex;
     width: 13%;
     justify-content: space-between; }
+    
 .parallax-container {
   display: flex; }
+
 .parallax-container__text {
   display: flex;
     width: 100%;
-    /* padding-top: 170px; */
     justify-content: space-evenly; }
+
   .parallax-container__text h1 {
     font-family: 'TypedepotCorsaGroteskRegular';
     font-weight: 500;
     font-size: 7rem;
     padding-bottom: 10px; }
+
   .parallax-container__text_p{
     font-family: 'TypedepotCorsaGroteskRegular';
     font-weight: 500;
     font-size: 3rem;
     padding-bottom: 10px;
   }
+
   .parallax-container__word{
     display: flex;
     align-items: baseline;
   }
+
 .parallax__content {
   height: 50vh; }
+
 .parallax__buttons {
   display: flex;
   justify-content: space-between;
@@ -325,8 +305,8 @@ iframe{
 }
 
 .tariff {
-margin: 0 10%;
-padding-top: 80px; }
+  margin: 0 10%;
+  padding-top: 80px; }
 .tariff_img{
   max-width: 30px;
   margin: 0 auto;
@@ -398,6 +378,7 @@ tbody tr:last-child th {
   margin: 70px 0;
   text-align: center; }
 
+
 footer {
 padding: 2% 2%;
 background-color: #333; }
@@ -412,6 +393,11 @@ margin-bottom: 0; }
   width: 32px;
   height: 32px;
   border-radius: 25%;
+}
+
+.logo_footer:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .container_logo_footer{

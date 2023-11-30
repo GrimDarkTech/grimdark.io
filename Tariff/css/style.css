@@ -1,0 +1,847 @@
+@font-face {
+  font-family: 'TypedepotCorsaGroteskRegular';
+  src: url(../fonts/TypedepotCorsaGroteskRegular.otf);
+}
+
+ul[class],
+ol[class] {
+padding: 0; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+margin: 0; }
+
+/* Set core body defaults */
+body {
+min-height: 100vh;
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+font-family: 'TypedepotCorsaGroteskRegular';
+opacity: 1;
+transition: .5s opacity ease-in-out; 
+}
+
+.body_loading {
+opacity: 1;
+}
+
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto; }
+
+a {
+text-decoration: none;
+color: black; 
+}
+
+a.header-menu__link{
+color: #fff;
+opacity: 1;
+transition: .6s all;
+}
+
+.header-menu__list > li{
+position: relative;
+}
+
+a.header-menu__link::after { 
+content: "";
+position: absolute;
+bottom: 0;
+left: 50%;
+display: block;
+background: none repeat scroll 0 0 transparent;
+height: 1px;
+width: 0;
+background: #fff;
+transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+a.header-menu__link:hover::after { 
+width: 100%; 
+left: 0; 
+}
+
+input,
+button,
+textarea,
+select {
+font: inherit; }
+
+button {
+border: none;
+margin: 0;
+padding: 0;
+width: auto;
+overflow: visible;
+background: transparent;
+color: inherit;
+font: inherit;
+line-height: normal;
+-webkit-font-smoothing: inherit;
+-moz-osx-font-smoothing: inherit;
+-webkit-appearance: none; }
+
+::-moz-focus-inner {
+border: 0;
+padding: 0; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+* {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important; } }
+
+
+.parallax {
+color: #fff;
+background-image: url(../images/image.png);
+background-size: cover;
+background-attachment: fixed;
+height: 100%; }
+
+.parallax__header {
+  display: flex;
+  padding: 30px 0px;
+  justify-content: space-between; }
+
+  .parallax__header-menu__logo {
+    display: flex;
+    width: 13%;
+    justify-content: space-between; }
+    
+.parallax-container {
+  display: flex; }
+
+.parallax-container__text {
+  display: flex;
+    width: 100%;
+    justify-content: space-evenly; }
+
+  .parallax-container__text h1 {
+    font-family: 'TypedepotCorsaGroteskRegular';
+    font-weight: 500;
+    font-size: 7rem;
+    padding-bottom: 10px; }
+
+  .parallax-container__text_p{
+    font-family: 'TypedepotCorsaGroteskRegular';
+    font-weight: 500;
+    font-size: 3rem;
+    padding-bottom: 10px;
+  }
+
+  .parallax-container__word{
+    display: flex;
+    align-items: baseline;
+  }
+
+.parallax__content {
+  height: 50vh; }
+
+.parallax__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px; }
+
+.button {
+padding: 14px 47px;
+border: 2px solid #ebf2f2;
+font-family: 'TypedepotCorsaGroteskRegular';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+cursor: pointer;
+transition: 1s;
+}
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.5em 1em -0.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+  transition: all 0.5s;
+}
+
+.goto-map,
+.about-hero {
+font-size: 16px;
+line-height: 22px; }
+
+.overlay {
+padding: 0 10%;
+background: rgba(33, 33, 33, 0.75);
+height: 100%; }
+
+.page-content {
+height: 600px; }
+
+.container {
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.about {
+margin: 0 10%;
+padding-top: 70px;
+}
+.columns_about{
+  display: flex;
+  justify-content: space-evenly;
+}
+.columns_about_blocks{
+  box-sizing: inherit;
+  border: 2px solid #ebf2f2;
+  border-radius: 5px;
+  padding-top: 20px!important;
+  padding: 40px;
+  width: 25%;
+  margin: 0.75rem;
+  text-align: center;
+  align-items: center;
+}
+.about_icons {
+  max-width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+.columns_about_blocks_text{
+  margin-top: 10px;
+}
+.columns_about_blocks_text h1{
+  margin-top: 20px;
+}
+.container__title {
+  font-family: 'TypedepotCorsaGroteskRegular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 70px;
+ }
+.about p:not(:last-child) {
+  margin-bottom: 30px; }
+
+.about_rsma {
+margin: 0 10%;
+padding-top: 80px; }
+.about_rsma h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'TypedepotCorsaGroteskRegular';
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 400; }
+.about_rsma__wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  height: 500px; }
+.about_rsma_img {
+  border-radius: 10px;
+  height: 260px;
+  width: 460px;
+}
+.container_video {
+  display: none;
+  /* display: flex; */
+  background-color: rgba(0,0,0,.6);
+  position: fixed;
+  z-index: 1300;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+}
+.cross{
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  top: 32px;
+  right: 32px;
+  transition: 1s;
+}
+.cross:hover {
+  transform: scale(1.3);
+}
+iframe{
+  height: calc(100% - 64px);
+  margin: 0 auto;
+  width: 80%;
+}
+
+#container_video2 {
+  display: none;
+}
+.about_rsma_container_media {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+.about_rsma_media{
+  width: 40%;
+}
+
+.tariff {
+  margin: 0 10%;
+  padding-top: 80px; }
+.tariff_img{
+  max-width: 30px;
+  margin: 0 auto;
+}
+table {  
+  border-spacing: 0;
+  width: 100%;
+}
+table td, table th {
+  border-collapse: collapse;
+  padding: 1.5rem 0.75rem;
+  border-bottom: 0.0625rem solid #d2d2d2;
+  width: 20%;
+}
+table th {
+  font-weight: 600;
+  width: 40%;
+}
+.table_title_container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.tariff_th_title_h{
+  text-align: center;
+  font-weight: 400;
+  font-size: 26px;
+  width: 20%;
+}
+.tariff_th_title_h_th{
+  width: 37%;
+}
+thead{
+  box-shadow: 0px 12px 6px -5px rgba(34, 60, 80, 0.04);
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+tbody tr:last-child th {
+  border-bottom: 0;
+}
+
+.tariff h2 {
+  font-family: 'TypedepotCorsaGroteskRegular';
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  line-height: 49px;
+  text-align: center; }
+.tariff__cards {
+  display: flex;
+  justify-content: space-between; }
+.tariff__cards-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "TypedepotCorsaGroteskRegular", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  .tariff__cards-link h4 {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    text-align: center; }
+  .tariff__cards-link__img {
+    box-shadow: 0 0 57px 0 rgba(19, 18, 33, 0.5);
+    margin-bottom: 15px; }
+.tariff__button {
+  margin: 70px 0;
+  text-align: center; }
+
+
+footer {
+padding: 2% 2%;
+background-color: #333; }
+
+footer p {
+color: #d0cbcb;
+font-size: 14px;
+line-height: 24px;
+margin-bottom: 0; }
+
+.logo_footer {
+  width: 32px;
+  height: 32px;
+  border-radius: 25%;
+}
+
+.logo_footer:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.container_logo_footer{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  align-items: center;
+}
+
+.container_footer_text{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.footer_link{
+  color: #d0cbcb;
+}
+
+a.footer_link:hover { 
+  color: #ffffff;
+}
+
+/* .footer_link{
+  color: #d0cbcb;
+  text-decoration: none; 
+}
+
+.footer_link:hover { 
+  
+  left: 0; 
+} */
+
+.parallax_footer_logo{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts{
+  margin: 0 10%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contacts h2 {
+font-family: 'TypedepotCorsaGroteskRegular';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 30px;
+text-align: center; }
+
+.socials {
+background: rgba(255, 255, 255, 0.9);
+display: flex;
+justify-content: center;
+width: 170px;
+justify-content: space-between;
+}
+
+.contact__icon img {
+height: 50px; }
+
+.animation-p{
+transform: translate(0px, 50%);
+opacity: 0;
+transition: all 1.5s ease 0s;
+}
+.animation-p._active{
+opacity: 1;
+transform: translate(0px, 0px);
+}
+.animation-p:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0.5em 1em -0.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+  transition: all 0.5s;
+}
+
+.header__menu{
+display: flex;
+align-items: center;
+}
+
+.header-menu__body{
+margin: auto 0;
+}
+
+.header-menu__list{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.header-menu__list > li:not(:last-child){
+margin-right: 20px;
+}
+
+.header-menu__link{  
+text-transform: uppercase;
+color: #e1dfdf;
+}
+
+a.logo-a__SGTY{
+padding-right: 10px;
+}
+
+
+@media (max-width: 680px){
+.menu__menu-burger{
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+
+}
+.menu__menu-burger span,
+.menu__menu-burger::before,
+.menu__menu-burger::after{
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #fff; 
+}
+.menu__menu-burger::before,
+.menu__menu-burger::after{
+    content: "";
+}
+.menu__menu-burger::before{
+    top: 0;
+}
+.menu__menu-burger::after{
+    bottom: 0;
+}
+.menu__menu-burger span{
+    top: 50%;
+    transform:scale(1) translate(0px, -50%);
+}
+.menu__menu-burger._active span{
+    transform:scale(0) translate(0px, -50%);
+}
+.menu__menu-burger._active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+}
+.menu__menu-burger._active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+}
+.header-menu__body{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 100px 0;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+    z-index: 2;
+}
+.header-menu__body._active{
+    left: 0;
+}
+.header-menu__body._active::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+}
+.header-menu__list > li {
+    margin-bottom: 40px;
+    margin-right: 0;
+    flex-wrap: wrap; 
+}
+.header-menu__list > li._active .menu_sub-list{
+    display: block;
+}
+.header-menu__list > li :last-child{
+    margin-bottom: 0px;
+}
+.header-menu__link {
+    font-size: 24px;
+}
+
+.header-menu__list{
+    flex-direction: column;
+}
+
+
+
+
+.parallax{
+  background-size: contain;
+  height: 26vh;
+}
+
+.parallax-container{
+  max-width: 70%;
+}
+.parallax__header-menu__logo {
+  width: 32%;
+}
+
+a.logo-a__SGTY{
+  padding-right: 10px;
+}
+
+.parallax-container__text h1{
+  font-size: 13px;
+}
+
+.parallax-container__text{
+  padding-top: 0;
+}
+
+.parallax-container__text p{
+  font-size: 11px;
+}
+
+.parallax__buttons{
+  display: none;
+}
+
+.about {
+  padding-top: 30px;
+}
+
+.container__title {
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.about p{
+  font-size: 14px;
+}
+
+.map {
+  padding-top: 30px;
+}
+
+
+.map h2 {
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.tariff {
+  padding-top: 16px;
+} 
+
+.tariff h2{
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.tariff__cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tariff__cards-link__img {
+  width: 50%;
+  margin-left: 26%;
+}
+
+.tariff__cards-link h4{
+  text-align: justify;
+  font-size: 13px;
+  margin-left: 26%;
+}
+
+.tariff__item{
+  margin-bottom: 15px;
+}
+
+.tariff__button {
+  margin: 20px 0;
+}
+
+.button {
+  padding: 4px 25px;
+  font-size: 14px;
+}
+
+.contacts h2 {
+  font-size: 19px;
+}
+
+.contacts__container {
+  margin: 20px 0;
+}
+
+.contact__icon img {
+  height: 25px;
+}
+
+.socials{
+  width: 120px;
+}
+}
+
+@media(max-width: 830px) and (min-width: 680px){
+
+.parallax{
+  background-size: contain;
+  height: 45vh;
+}
+
+.parallax-container__text {
+  padding-top: 60px;
+}
+
+.parallax-container__text h1 {
+font-size: 28px;
+}
+
+.parallax__buttons button{
+padding: 12px 24px;
+}
+
+.parallax__buttons {
+margin-top: 24px;
+}
+
+.tariff__cards-link__img {
+width: 65%;
+margin-left: 20%;
+}
+
+.tariff__cards-link h4 {
+font-size: 14px;
+
+}
+.about {
+padding-top: 50px;
+}
+.container__title {
+font-size: 29px;
+margin-bottom: 7%;
+}
+
+.map h2 {
+margin-bottom: 7%;
+font-size: 29px;
+}
+
+.tariff h2 {
+font-size: 29px;
+margin-bottom: 50px;
+}
+}
+
+@media(max-width: 1280px) and (min-width: 1025px){
+
+.parallax{
+  background-size: contain;
+  height: 60vh;
+}
+
+.parallax-container__text {
+  padding-top: 60px;
+}
+
+.parallax-container__text h1 {
+font-size: 28px;
+}
+
+.parallax__buttons button{
+padding: 12px 24px;
+}
+
+.parallax__buttons {
+margin-top: 24px;
+}
+
+}
+@media(max-width: 1024px) and (min-width: 830px){
+.parallax{
+  background-size: contain;
+  height: 60vh;
+}
+.parallax-container__text {
+  padding-top: 60px;
+}
+
+.parallax-container__text h1 {
+font-size: 28px;
+}
+
+.parallax__buttons button{
+padding: 12px 24px;
+}
+
+.parallax__buttons {
+margin-top: 24px;
+}
+
+.tariff__button {
+margin: 20px 0;
+}
+
+.button {
+padding: 7px 35px;
+font-size: 18px;
+}
+
+.contacts h2 {
+font-size: 19px;
+}
+
+.contacts__container {
+margin: 20px 0;
+}
+
+.contact__icon img {
+height: 34px;
+}
+
+.socials{
+width: 150px;
+}
+}
+
+@media(max-width: 900px)
+{
+.parallax-container{
+  max-width: 70%;
+}
+}
+
+@media(max-width: 300px)
+{
+.parallax-container{
+  max-width: 90%;
+}
+}

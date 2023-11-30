@@ -115,7 +115,8 @@ function closeVideo(numberVideo)
             document.getElementById("video1").src = "https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW";
             break;
         case 2:
-            document.getElementById("container_video2").style.display = 'none';
+            document.getElementById("container_video2").style.display = 'none';            
+            document.getElementById("video2").src = "https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW";
             break;   
     }
 }
