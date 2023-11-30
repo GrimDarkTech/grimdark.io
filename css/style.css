@@ -187,20 +187,20 @@ height: 100%; }
   margin-top: 50px; }
 
 .button {
-background: rgba(12, 21, 101, 0.9);
-padding: 16px 86px;
+padding: 14px 47px;
+border: 2px solid #ebf2f2;
 font-family: 'TypedepotCorsaGroteskRegular';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 27px;
-color: white;
 cursor: pointer;
 transition: 1s;
 }
 .button:hover {
-  background: rgba(12, 21, 101, 0.7);
   transform: scale(1.1);
+  box-shadow: 0 0.5em 1em -0.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+  transition: all 0.5s;
 }
 
 .goto-map,
@@ -326,20 +326,19 @@ iframe{
 
 .tariff {
 margin: 0 10%;
-padding-top: 65px; }
+padding-top: 80px; }
 .tariff_img{
   max-width: 30px;
   margin: 0 auto;
 }
-table {
-  border-collapse: collapse;
+table {  
+  border-spacing: 0;
   width: 100%;
 }
 table td, table th {
+  border-collapse: collapse;
   padding: 1.5rem 0.75rem;
-  vertical-align: top;
   border-bottom: 0.0625rem solid #d2d2d2;
-  overflow-wrap: break-word;
   width: 20%;
 }
 table th {
@@ -348,18 +347,30 @@ table th {
 }
 .table_title_container{
   display: flex;
+  justify-content: space-evenly;
 }
 .tariff_th_title_h{
-  padding: 1.5rem 0.75rem;
-  border-bottom: 0.0625rem solid #d2d2d2;
   text-align: center;
   font-weight: 400;
   font-size: 26px;
   width: 20%;
 }
 .tariff_th_title_h_th{
-  width: 40%;
+  width: 37%;
 }
+thead{
+  box-shadow: 0px 12px 6px -5px rgba(34, 60, 80, 0.04);
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+tbody tr:last-child th {
+  border-bottom: 0;
+}
+
 .tariff h2 {
   font-family: 'TypedepotCorsaGroteskRegular';
   font-style: normal;
@@ -397,6 +408,12 @@ font-size: 14px;
 line-height: 24px;
 margin-bottom: 0; }
 
+.contacts{
+  margin: 0 10%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .contacts h2 {
 font-family: 'TypedepotCorsaGroteskRegular';
 font-style: normal;
@@ -404,13 +421,6 @@ font-weight: 400;
 font-size: 36px;
 line-height: 30px;
 text-align: center; }
-
-.contacts__container {
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-margin: 60px 0; }
 
 .socials {
 background: rgba(255, 255, 255, 0.9);
