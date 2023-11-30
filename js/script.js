@@ -98,9 +98,11 @@ function openVideo(numberVideo)
     switch(numberVideo){
         case 1:
             document.getElementById("container_video1").style.display = 'flex';
+            document.getElementById("video1").src += "&autoplay=1";
             break;
         case 2:
             document.getElementById("container_video2").style.display = 'flex';
+            document.getElementById("video2").src += "&autoplay=1";
             break;   
     }
 }
@@ -110,6 +112,7 @@ function closeVideo(numberVideo)
     switch(numberVideo){
         case 1:
             document.getElementById("container_video1").style.display = 'none';
+            document.getElementById("video1").src = "https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW";
             break;
         case 2:
             document.getElementById("container_video2").style.display = 'none';
