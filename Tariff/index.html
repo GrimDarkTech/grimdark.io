@@ -6,37 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grim Dark</title>
-    <link rel="stylesheet" href="css/style_.css">
+    <link rel="icon" href="images/Logo_company.png">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=0c3bd4b9-dcca-4535-9121-c65572f249a2&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
-    <section class="parallax">
-        <div class="overlay">
-            <div class="parallax__content container">
-                <div class="parallax__header">
-                    <div class="parallax__header-menu__logo">
-                        <a href="#" class="logo-a__Company">
-                            <img src="images/Logo_company.png" alt="Company">
-                        </a>
+    <header class="header">
+        <div class="container">
+            <div class="header_logo">
+                <a href="#" class="logo-a__Company">
+                    <img src="images/Logo_company.png" alt="Company">
+                </a>            
+                <div class="header_menu">
+                    <div class="menu_menu-burger">
+                        <span></span>
                     </div>
-                    <div class="header__menu">
-                        <div class="menu__menu-burger">
-                            <span></span>
-                        </div>
-                        <nav class="header-menu__body">
-                            <ul class="header-menu__list">
-                                <li><a href="../index.html#about" class="header-menu__link">О продукте</a></li>
-                                <li><a href="../index.html#tariff" class="header-menu__link">Тарифы</a></li>
-                                <li><a href="../index.html#contacts" class="header-menu__link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>                
+                    <nav class="header-menu__body">
+                        <ul class="header-menu__list">
+                            <li><a href="../index.html#about" class="header-menu__link">О продукте</a></li>
+                            <li><a href="../index.html#tariff" class="header-menu__link">Тарифы</a></li>
+                            <li><a href="../index.html#contacts" class="header-menu__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <section class="tariff" id="tariff">
         <div class="container">
@@ -203,7 +199,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
-    <script defer src="js/Script_map.js"></script>
 </body>
 
 </html>
