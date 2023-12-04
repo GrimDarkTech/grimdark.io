@@ -139,13 +139,9 @@ padding: 0; }
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important; } }
 
-img.logo-img__SGTY
-{
-margin-top: 3px;
-}
 .parallax {
 color: #fff;
-background-image: url(../images/image.png);
+background-image: url(../images/Bg.png);
 background-size: cover;
 background-attachment: fixed;
 height: 100%; }
@@ -325,7 +321,14 @@ iframe{
 }
 .about_rsma_media{
   width: 40%;
+  transition: all 0.5s;
 }
+.about_rsma_media:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+
 .about_rsma_p{
   margin-bottom: 10px;
 }
@@ -529,8 +532,4 @@ margin-right: 20px;
 .header-menu__link{  
 text-transform: uppercase;
 color: #e1dfdf;
-}
-
-a.logo-a__SGTY{
-padding-right: 10px;
 }
