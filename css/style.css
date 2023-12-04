@@ -153,10 +153,18 @@ height: 100%; }
   display: flex;
   padding: 30px 0px;
   justify-content: space-between; }
-  .parallax__header-menu__logo {
-    display: flex;
-    width: 13%;
-    justify-content: space-between; }
+.parallax__header-menu__logo {
+  display: flex;
+  width: 15%;
+  justify-content: space-between; }
+.logo-a__Company{
+  height: 50px;
+  width: auto;
+}
+.logo-a__Found{
+  height: 50px;
+  width: auto;
+}
 .parallax-container {
   display: flex; }
 .parallax-container__text {
@@ -405,6 +413,12 @@ color: #d0cbcb;
 font-size: 14px;
 line-height: 24px;
 margin-bottom: 0; }
+
+.footer_container_logo{
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+}
   
 .logo_footer {
   width: 32px;
@@ -448,6 +462,15 @@ a.footer_link:hover {
   margin: 0 10%;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.contacts_fond_p{
+  margin-top: 10px;
+}
+.contacts_fond_a{
+  text-decoration: none;
+}
+.contacts_fond_a:hover{
+  text-decoration: underline;
 }
 
 .contacts h2 {
