@@ -120,3 +120,7 @@ function closeVideo(numberVideo)
             break;   
     }
 }
+
+function addStorage(value){
+    localStorage.setItem('tariff', value);
+}

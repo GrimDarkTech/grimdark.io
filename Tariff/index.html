@@ -35,9 +35,9 @@
         <div class="header_tariff">
             <div class="container">
                 <div class="header_tariff_title_container">
-                    <button class="header_tariff_title"><h2 id="title_Basic">Basic</h2></button>
-                    <button class="header_tariff_title"><h2 id="title_Standart">Standart</h2></button>
-                    <button class="header_tariff_title"><h2 id="title_Premium">Premium</h2></button>
+                    <button class="header_tariff_title" onclick="openTariff('basic')"><h2 id="title_Basic" class="header_tariff_title_h">Basic</h2></button>
+                    <button class="header_tariff_title" onclick="openTariff('standart')"><h2 id="title_Standart" class="header_tariff_title_h">Standart</h2></button>
+                    <button class="header_tariff_title" onclick="openTariff('premium')"><h2 id="title_Premium" class="header_tariff_title_h">Premium</h2></button>
                 </div>
             </div>
         </div>
@@ -46,188 +46,184 @@
     <section class="tariff" id="tariff">
         <div class="container">
             <h2 class="container__title">Характеристики</h2>
-            <div class="tariff_container_Basic">
+            <div id="tariff_container_Basic">
                 <table>
                     <tbody>
                         <tr>
-                            <th>Механические соединения</th>
-                            <td><p>8000 руб</p></td>
+                            <th colspan="2">Механические соединения</th>
+                            <td colspan="2"><p>8000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Микроконтроллеры</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Микроконтроллеры</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Протоколы передачи данных</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Протоколы передачи данных</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Светодиоды</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Светодиоды</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Электродвигатели</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Электродвигатели</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Драйвер электродвигателя</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Драйвер электродвигателя</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Дальномеры</th>
-                            <td><p>3500 руб</p></td>
+                            <th colspan="2">Дальномеры</th>
+                            <td colspan="2"><p>3500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Текстовые дисплеи</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Текстовые дисплеи</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Сервоприводы</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Сервоприводы</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
                             <th>Покупка:</th>
                             <td><p>85000 руб</p></td>
-                        </tr>
-                        <tr>
                             <th>Подписка:</th>
                             <td><p>10200 руб</p></td>
                         </tr>
                     </tbody>
                 </table>                
             </div>
-            <div class="tariff_container_Standart">
+            <div id="tariff_container_Standart">
                 <table>
                     <tbody>
                         <tr>
-                            <th>Механические соединения</th>
-                            <td><p>8000 руб</p></td>
+                            <th colspan="2">Механические соединения</th>
+                            <td colspan="2"><p>8000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Микроконтроллеры</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Микроконтроллеры</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Протоколы передачи данных</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Протоколы передачи данных</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Светодиоды</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Светодиоды</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Электродвигатели</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Электродвигатели</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Драйвер электродвигателя</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Драйвер электродвигателя</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Дальномеры</th>
-                            <td><p>3500 руб</p></td>
+                            <th colspan="2">Дальномеры</th>
+                            <td colspan="2"><p>3500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Текстовые дисплеи</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Текстовые дисплеи</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Сервоприводы</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Сервоприводы</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Шаговые двигатели</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Шаговые двигатели</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>3D-модели узлов роботов</th>
-                            <td><p>6500 руб</p></td>
+                            <th colspan="2">3D-модели узлов роботов</th>
+                            <td colspan="2"><p>6500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Энкодер, ДУС</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Энкодер, ДУС</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
                             <th>Покупка:</th>
                             <td><p>113750 руб</p></td>
-                        </tr>
-                        <tr>
                             <th>Подписка:</th>
                             <td><p>13650 руб</p></td>
                         </tr>
                     </tbody>
                 </table>                
             </div>
-            <div class="tariff_container_Premium">
+            <div id="tariff_container_Premium">
                 <table>
                     <tbody>
                         <tr>
-                            <th>Механические соединения</th>
-                            <td><p>8000 руб</p></td>
+                            <th colspan="2">Механические соединения</th>
+                            <td colspan="2"><p>8000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Микроконтроллеры</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Микроконтроллеры</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Протоколы передачи данных</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Протоколы передачи данных</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Светодиоды</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Светодиоды</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Электродвигатели</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Электродвигатели</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Драйвер электродвигателя</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Драйвер электродвигателя</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Дальномеры</th>
-                            <td><p>3500 руб</p></td>
+                            <th colspan="2">Дальномеры</th>
+                            <td colspan="2"><p>3500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Текстовые дисплеи</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Текстовые дисплеи</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Сервоприводы</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Сервоприводы</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Шаговые двигатели</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Шаговые двигатели</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>3D-модели узлов роботов</th>
-                            <td><p>6500 руб</p></td>
+                            <th colspan="2">3D-модели узлов роботов</th>
+                            <td colspan="2"><p>6500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Энкодер, ДУС</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Энкодер, ДУС</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Устройства ввода данных</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Устройства ввода данных</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Датчик освещенности</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Датчик освещенности</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Всенаправленные кроеса</th>
-                            <td><p>5000 руб</p></td>
+                            <th colspan="2">Всенаправленные кроеса</th>
+                            <td colspan="2"><p>5000 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Концевые выключатели</th>
-                            <td><p>2500 руб</p></td>
+                            <th colspan="2">Концевые выключатели</th>
+                            <td colspan="2"><p>2500 руб</p></td>
                         </tr>
                         <tr>
-                            <th>Готовые примеры роботов</th>
-                            <td><p>1500 руб</p></td>
+                            <th colspan="2">Готовые примеры роботов</th>
+                            <td colspan="2"><p>1500 руб</p></td>
                         </tr>
                         <tr>
                             <th>Покупка:</th>
@@ -238,7 +234,7 @@
                     </tbody>
                 </table>                
             </div>
-            <div class="table_title_container">
+            <div class="table_button_container">
                 <a href="#feedback"><button class="button">Отправить заявку</button></a>
             </div>
         </div>
