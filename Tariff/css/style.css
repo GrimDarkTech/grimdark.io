@@ -84,7 +84,7 @@ body {
     font-weight: 400;
     font-size: 36px;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .header {
@@ -165,11 +165,7 @@ button{
 
 .tariff {
     margin: 0 10%;
-    padding-top: 80px; }
-.tariff_img{
-    max-width: 30px;
-    margin: 0 auto;
-}
+    padding-top: 230px; }
 table {  
     border-spacing: 0;
     width: 100%;
@@ -179,6 +175,7 @@ table td, table th {
     padding: 1.5rem 0.75rem;
     border-bottom: 0.0625rem solid #d2d2d2;
     text-align: center;
+    width: 25%;
 }
 table tr:last-child {  
     border-spacing: 0;
@@ -228,9 +225,6 @@ tbody tr:last-child th {
     color: #000;
     text-decoration: none;
     text-align: center; }
-.tariff__cards-link__img {
-    box-shadow: 0 0 57px 0 rgba(19, 18, 33, 0.5);
-    margin-bottom: 15px; }
 .tariff__button {
     margin: 70px 0;
     text-align: center; }
