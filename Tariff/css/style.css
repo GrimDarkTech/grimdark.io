@@ -91,7 +91,7 @@ body {
     position: fixed;
     width: 100%;
     background: #373e49;
-    
+    z-index: 100;
 }
 
 .header_logo {
@@ -235,6 +235,22 @@ tbody tr:last-child th {
     margin: 70px 0;
     text-align: center; }
 
+.button_form{
+    transition: all 0.5s;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
 .button {
     padding: 14px 47px;
     border: 2px solid #ebf2f2;
@@ -265,13 +281,61 @@ tbody tr:last-child th {
 }
 
 .feedback {
+    display: none;
     margin: 0 10%;
     padding-top: 80px;
     padding-bottom: 80px;
+    animation: animation_feedback;
+}
+
+@keyframes animation_feedback {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 14px 47px;
+    border: 2px solid #ebf2f2;
+    border-radius: 15px;
+}
+
+select{
+    width: 75%;
+    padding: 14px 47px;
+    border: 2px solid #ebf2f2;
+    border-radius: 5px;
+    font-family: 'TypedepotCorsaGroteskRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+label{
+    font-family: 'TypedepotCorsaGroteskRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form_container_items{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
 }
 
 
 footer {
+    margin-top: 30px;
     padding: 2% 2%;
     background-color: #333; 
 }

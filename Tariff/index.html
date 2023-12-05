@@ -235,14 +235,47 @@
                 </table>                
             </div>
             <div class="table_button_container">
-                <a href="#feedback"><button class="button">Отправить заявку</button></a>
+                <a href="#feedback"><button class="button" onclick="getFeedback()">Отправить заявку</button></a>
             </div>
         </div>
     </section>
 
     <section class="feedback" id="feedback">
         <div class="container">
-            <h2 class="container__title">Название формы</h2>
+            <h2 class="container__title">Заявка на приобретение</h2>
+            <form id="form_feedback">
+                <!-- <p class="form_feedback_p" id="form_tariff_title_p">
+                    Название тарифа: 
+                    <input id="form_tariff_title" type="text">
+                </p> -->
+                <div class="form_container_items">
+                    <label for="form_tariff_title">Название тарифа:</label>
+                    <select id="form_tariff_title" name="form_tariff_title">
+                        <option value="basic">Basic</option>
+                        <option value="standart">Standart</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <!-- <p class="form_feedback_p" id="form_tariff_purchase_or_subscription_p">
+                    Вам нравится стрелять?
+                    <input id="form_tariff_purchase_or_subscription" type="text">
+                </p> -->
+                <div class="form_container_items">
+                    <label for="form_tariff_purchase_or_subscription">Покупка или подписка:</label>
+                    <select id="form_tariff_purchase_or_subscription" name="form_tariff_purchase_or_subscription">
+                        <option value="purchase">Покупка</option>
+                        <option value="subscription">Подписка</option>
+                    </select>
+                </div>
+                <!-- <p class="form_feedback_p" id="form_tariff_title">
+                    Вам нравится открытый мир в играх?
+                    <input id="openWorld" type="text">
+                </p> -->
+                <div class="form_buttons">
+                    <input class="button button_form" type="reset" value="Очистить" onclick="clear()">
+                    <input class="button button_form"type="button" value="Отправить" onclick="results()">
+                </div>
+            </form>
         </div>
     </section>
 
