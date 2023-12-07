@@ -9,7 +9,6 @@
     <link rel="icon" href="images/Logo_company.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header class="header">
         <div class="container">
@@ -51,7 +50,15 @@
 
     <section class="pictures" id="pictures">
         <div class="container">
-            тут будут картинки
+            <div class="gallery">
+                <button class="arrow" onclick="scrollGallery('left')"><img id="left" alt="<" src="images/arrow.svg"></button>
+                <div id="image1" class="image_container"></div>
+                <div class="container_front_image">
+                    <div id="image2" class="image_container front_image"></div>
+                </div>
+                <div id="image3" class="image_container"></div>
+                <button class="arrow" onclick="scrollGallery('right')"><img id="right" alt=">" src="images/arrow.svg"></button>
+            </div>
         </div>
     </section>
 
@@ -86,6 +93,7 @@
                 <a href="#" class="footer_link">О компании</a>
             </div>
         </div>
+        <script defer src="js/script.js"></script>
     </footer>
 </body>
 </html>
