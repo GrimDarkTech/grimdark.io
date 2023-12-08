@@ -287,15 +287,14 @@ tbody tr:last-child th {
     100% {opacity: 1}
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     padding: 14px 47px;
     border: 2px solid #ebf2f2;
     border-radius: 15px;
 }
-
-select{
+.input_field {
     width: 75%;
     padding: 14px 47px;
     border: 2px solid #ebf2f2;
@@ -304,13 +303,28 @@ select{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+    transition: all 0.5s;
 }
 
-label{
-    font-family: 'TypedepotCorsaGroteskRegular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+.input_field:focus {
+    box-shadow: 0 0.5em 1em -0.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+    transition: all 0.5s;
+}
+
+#form_tariff_number {
+    width: 70%;
+}
+
+#confirmation_a:hover {
+    text-decoration: underline;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px rgb(255 207 207);
+}
+
+textarea {
+    resize: none;
 }
 
 .form_container_items{

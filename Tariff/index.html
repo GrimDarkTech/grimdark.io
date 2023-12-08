@@ -9,6 +9,8 @@
     <link rel="icon" href="images/Logo_company.png">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
 
 <body>
@@ -240,40 +242,51 @@
         </div>
     </section>
 
-    <section class="feedback" id="feedback">
+    <section class="feedback" id="feedback" style="display: block;">
         <div class="container">
             <h2 class="container__title">Заявка на приобретение</h2>
             <form id="form_feedback">
-                <!-- <p class="form_feedback_p" id="form_tariff_title_p">
-                    Название тарифа: 
-                    <input id="form_tariff_title" type="text">
-                </p> -->
                 <div class="form_container_items">
                     <label for="form_tariff_title">Название тарифа:</label>
-                    <select id="form_tariff_title" name="form_tariff_title">
+                    <select class="input_field" id="form_tariff_title" name="form_tariff_title">
                         <option value="basic">Basic</option>
                         <option value="standart">Standart</option>
                         <option value="premium">Premium</option>
                     </select>
                 </div>
-                <!-- <p class="form_feedback_p" id="form_tariff_purchase_or_subscription_p">
-                    Вам нравится стрелять?
-                    <input id="form_tariff_purchase_or_subscription" type="text">
-                </p> -->
                 <div class="form_container_items">
                     <label for="form_tariff_purchase_or_subscription">Покупка или подписка:</label>
-                    <select id="form_tariff_purchase_or_subscription" name="form_tariff_purchase_or_subscription">
+                    <select class="input_field" id="form_tariff_purchase_or_subscription" name="form_tariff_purchase_or_subscription">
                         <option value="purchase">Покупка</option>
                         <option value="subscription">Подписка</option>
                     </select>
                 </div>
-                <!-- <p class="form_feedback_p" id="form_tariff_title">
-                    Вам нравится открытый мир в играх?
-                    <input id="openWorld" type="text">
-                </p> -->
+                <div class="form_container_items">
+                    <label for="form_tariff_name">Ваше Имя: *</label>
+                    <input class="input_field" id="form_tariff_name" required value="qwerty">
+                </div>
+                <div class="form_container_items">
+                    <label for="form_tariff_email">Ваш e-mail: *</label>
+                    <input type="email" class="input_field" id="form_tariff_email" required value="qwe@mail.ru">
+                </div>
+                <div class="form_container_items">
+                    <label for="form_tariff_phone">Ваш телефон: *</label>
+                    <input class="input_field form_tariff_phone" id="form_tariff_phone" placeholder="+7(xxx) xxx-xxxx" required value="1234560789">
+                </div>
+                <div class="form_container_items">
+                    <label for="form_tariff_comment">Комментарий:</label>
+                    <textarea class="input_field" id="form_tariff_comment"></textarea>
+                </div>
+                <div class="form_container_items">
+                    <label for="form_tariff_number" id="form_tariff_number_label"></label>
+                    <input class="input_field" id="form_tariff_number">
+                </div>
+                <div class="form_container_items">
+                    <label for="form_tariff_confirmation"><input id="form_tariff_confirmation" type="checkbox" required> Подтверждаю своё согласие с <a href="#" id="confirmation_a">правилами пользования сайтом<a> *</label>
+                </div>
                 <div class="form_buttons">
-                    <input class="button button_form" type="reset" value="Очистить" onclick="clear()">
-                    <input class="button button_form"type="button" value="Отправить" onclick="results()">
+                    <input class="button button_form" type="reset" value="Очистить">
+                    <input class="button button_form" type="button" value="Отправить" onclick="send()">
                 </div>
             </form>
         </div>
