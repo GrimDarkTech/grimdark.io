@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: grimdark.ru
+Sitemap: http://grimdark.ru/sitemap.xml
