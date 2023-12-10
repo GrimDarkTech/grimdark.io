@@ -68,6 +68,10 @@ function send(){
     };
       
     let json = JSON.stringify(form);
+
+    document.getElementById("feedback").style.display = 'none';
+    if ( location.reload())
+        alert("Заявка отправлена");
 }
 
 function getFeedback() {
