@@ -48,3 +48,4 @@ function scrollGallery(side)
             break; 
     }
 }
+

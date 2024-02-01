@@ -1,0 +1,94 @@
+@media (max-width: 640px) {
+    body {
+        font-size: 10px;
+    }
+
+    .logo-a__Company {
+        height: 23px;
+    }
+
+    .header_logo {
+        justify-content: space-around;
+    }
+    
+    .container__title {            
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .header_tariff_title_h {
+        font-size: 20px;
+    }
+
+    .header_tariff_title:hover{
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+    .header_tariff_title {
+        width: 120px;
+    }
+
+    .tariff {
+        padding-top: 186px;
+    }
+
+    .tariff h2 {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    table td, table th {
+        padding: 1rem 0.4rem;
+    }
+
+    .button {
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+
+    .feedback{
+        padding-top: 50px;  
+        padding-bottom: 50px;
+    }
+
+    form {
+        padding: 10px 20px;
+    }
+
+    .form_container_items {
+        margin-bottom: 15px;
+    }
+
+    .input_field {
+        width: 60%;
+        font-size: 10px;
+        padding: 5px 5px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+    .logo-a__Found {
+        height: 22px;
+    }
+
+    .footer_link {
+        line-height: 24px;
+    }
+
+    .logo_footer {
+        width: 22px;
+        height: 22px;
+        border-radius: 25%;
+    }
+
+    .container_logo_footer {
+        width: 30%;
+    }
+
+    .footer_container_logo {
+        width: 22%;
+    }
+
+}

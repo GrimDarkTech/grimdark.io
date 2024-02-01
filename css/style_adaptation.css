@@ -1,0 +1,143 @@
+@media (max-width: 640px) {
+    body {
+        font-size: 10px;
+    }
+
+    .parallax-container__text h1 {
+        font-size: 1.2rem;
+    }
+
+    .parallax-container__text_p {
+        font-size: 1rem;
+    }
+
+    .logo-a__Company {
+        height: 23px;
+    }
+
+    .container__title {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .parallax__content {
+        height: 30vh;
+    }
+
+    .about {
+        padding-top: 50px;
+    }
+
+    .columns_about {
+        flex-wrap: wrap;
+    }
+
+    .columns_about_blocks {
+        padding: 15px;
+        width: 47%;
+        margin: 0;
+        margin-bottom: 0.7rem;
+    }
+
+    .about_icons {
+        max-width: 71.19px;
+        margin-bottom: 15px;
+    }
+
+    .about_rsma h2 {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .about_rsma {
+        padding-top: 50px;
+    }
+
+    .about_rsma_container_media {
+        flex-wrap: wrap;
+    }
+
+    .about_rsma_media {
+        width: 80%;
+        margin: 0.7rem;
+    }
+
+    .about_rsma_img {
+        height: auto;
+    }
+
+    .tariff h2 {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .tariff {
+        padding-top: 50px;
+    }
+
+    .tariff_th_title_h {
+        font-size: 10px;
+    }itle_container
+
+    .tariff_img {
+        max-width: 10px;
+    }
+
+    table td, table th {
+        padding: 0.5rem 0.7rem;
+    }
+
+    .button {
+        padding: 1px 5px;
+        font-size: 8px;
+    }
+
+    .tariff_th_title_h_th {
+        width: 30%;
+    }
+
+    .table_title_container{
+        display: none;
+    }
+
+    #containerForAdapt{
+        display: block;
+    }
+
+    .contacts h2 {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .logo-a__Found {
+        height: 22px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+    .footer_link {
+        line-height: 24px;
+    }
+
+    .logo_footer {
+        width: 22px;
+        height: 22px;
+        border-radius: 25%;
+    }
+
+    .container_logo_footer {
+        width: 30%;
+    }
+
+    .footer_container_logo {
+        width: 22%;
+    }
+
+}

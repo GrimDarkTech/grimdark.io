@@ -275,6 +275,114 @@ button{
     background-size: cover;
 }
 
+.gallery_adaption{
+    display: none;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    overflow-x: scroll;
+  
+    /* prevent accidentally going back or triggering other swipe events */
+    overscroll-behavior: contain;
+  
+    /* hide scroll bar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  
+    /* momentum scroll on iOS */
+    -webkit-overflow-scrolling: touch;
+  
+    /* disable vertical scroll for touch */
+    touch-action: pan-x;
+  
+    /* scroll snapping */
+    scroll-snap-type: x mandatory;
+  }
+  
+  /* hide scroll bar */
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .item {
+    height: 140px;
+    width: 100%;
+    flex-shrink: 0;
+  
+    /* scroll snapping */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  /* 
+    The styling below is only for the decoration of this demo, 
+    it has no impact on scrolling or scroll behavior
+  */
+  .indicatorsList,
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list {
+    border-radius: 10px;
+    box-shadow: 0 0.5em 1em -0.125em hsl(0deg 0% 4% / 41%), 0 0 0 1px hsl(0deg 0% 4% / 0%);
+  }.list::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  
+  .item:nth-child(4n + 1) {
+    background-image: url(../images/image1.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 2) {
+    background-image: url(../images/image2.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 3) {
+    background-image: url(../images/image3.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 4) {
+    background-image: url(../images/image4.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 5) {
+    background-image: url(../images/image5.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 6) {
+    background-image: url(../images/image6.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 7) {
+    background-image: url(../images/image7.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 8) {
+    background-image: url(../images/image8.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 9) {
+    background-image: url(../images/image9.png);
+    background-size: cover;
+  }
+  .item:nth-child(4n + 10) {
+    background-image: url(../images/image10.png);
+    background-size: cover;
+  }
+  
+  .viewport {
+    max-width: 420px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+
 footer {
     margin-top: 30px;
     padding: 2% 2%;
