@@ -1,0 +1,57 @@
+@media (max-width: 640px) {
+    body {
+        font-size: 10px;
+    }
+
+    .logo-a__Company {
+        height: 23px;
+    }
+
+    .header_logo {
+        justify-content: space-around;
+    }
+    
+    .container__title {            
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    #terms_main {
+        padding-top: 110px;
+    }
+
+    .terms_container {
+        padding-top: 30px;
+    }
+
+    #terms_9{
+        padding-bottom: 40px;
+    }
+
+    .logo-a__Found {
+        height: 22px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+    .footer_link {
+        line-height: 24px;
+    }
+
+    .logo_footer {
+        width: 22px;
+        height: 22px;
+        border-radius: 25%;
+    }
+
+    .container_logo_footer {
+        width: 30%;
+    }
+
+    .footer_container_logo {
+        width: 22%;
+    }
+
+}

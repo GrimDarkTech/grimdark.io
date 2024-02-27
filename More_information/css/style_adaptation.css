@@ -39,6 +39,7 @@
 
     .gallery_adaption{
         display: flex;
+        justify-content: center;
     }
 
     footer p {
