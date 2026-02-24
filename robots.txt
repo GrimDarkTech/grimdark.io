@@ -1,4 +1,28 @@
+# robots.txt для сайта RSMA - пакета имитационного моделирования мобильных роботов
+# Основной сайт: https://grimdark.ru
+# Репозиторий проекта: https://github.com/GrimDarkTech/RSMA
+
+# Основные правила для всех поисковых роботов
 User-agent: *
-Disallow: 
+Disallow:
+
+# Указываем основное зеркало сайта (с www или без)
+# Если сайт работает преимущественно без www, оставляем как есть
 Host: grimdark.ru
-Sitemap: http://grimdark.ru/sitemap.xml
+
+# Указываем путь к карте сайта для лучшей индексации
+Sitemap: https://grimdark.ru/sitemap.xml
+
+# Дополнительные рекомендации для специфических роботов (опционально)
+
+# Для Google
+User-agent: Googlebot
+Disallow:
+
+# Для Яндекса
+User-agent: Yandex
+Disallow:
+
+# Для Bing
+User-agent: Bingbot
+Disallow:
