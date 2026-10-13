@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Среда имитационного моделирования мобильных роботов RSMA</title>
-    <link rel="icon" href="images/Logo_company.png">
+    <title>{{site.meta.home.title}}</title>
+    <link rel="icon" href="{{root}}{{site.assets.favicon}}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_adaptation.css">
-    <script defer src="js/script.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
-<body>
+<body data-page="home" data-root="">
     <section class="parallax">
         <div class="overlay">
             <div class="parallax__content container">
                 <div class="parallax__header">
                     <div class="parallax__header-menu__logo">
                         <a href="#">
-                            <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
+                            <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
                         </a>
                     </div>
                 <div class="header__menu">
@@ -28,31 +29,21 @@
                     </div>
                     <nav class="header-menu__body">
                         <ul class="header-menu__list">
-                            <li><a href="#about" class="header-menu__link">О продукте</a></li>
-                            <li><a href="#tariff" class="header-menu__link">Тарифы</a></li>
-                            <li><a href="#contacts" class="header-menu__link">Контакты</a></li>
+                            <template data-repeat="site.nav" data-as="n">
+                                <li><a href="{{root}}{{n.href}}" class="header-menu__link">{{n.label}}</a></li>
+                            </template>
                         </ul>
                     </nav>
                 </div>
                 </div>
                 <div class="parallax-container">
                     <div class="parallax-container__text">
-                        <div class="parallax-container__word">
-                            <h1 class="parallax-container__text_h">R</h1>
-                            <p class="parallax-container__text_p">obot</p>
-                        </div>
-                        <div class="parallax-container__word">
-                            <h1 class="parallax-container__text_h">S</h1>
-                            <p class="parallax-container__text_p">imulation</p>
-                        </div>
-                        <div class="parallax-container__word">
-                            <h1 class="parallax-container__text_h">M</h1>
-                            <p class="parallax-container__text_p">odeling</p>
-                        </div>
-                        <div class="parallax-container__word">
-                            <h1 class="parallax-container__text_h">A</h1>
-                            <p class="parallax-container__text_p">sset</p>
-                        </div>   
+                        <template data-repeat="site.project.heroWords" data-as="w">
+                            <div class="parallax-container__word">
+                                <h1 class="parallax-container__text_h">{{w.letter}}</h1>
+                                <p class="parallax-container__text_p">{{w.word}}</p>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -61,182 +52,72 @@
 
     <section class="about" id="about">
         <div class="container">
-            <h2 class="container__title">Особенности продукта</h2>
+            <h2 class="container__title">{{page.features.title}}</h2>
             <div class="columns_about">
-                <a href="More_information/index.html#about_models" class="columns_about_blocks animation-p _anim-items">
-                    <img alt="Models" src="images/3d_model_tgfzi0g6n25x.svg" class="about_icons">
-                    <h3 class="columns_about_blocks_text">3D-модели</h3>
-                    <p class="columns_about_blocks_text">Виртуальные модели роботов на этапе разработки</p>
-                </a>
-                <a href="More_information/index.html#about_experiments" class="columns_about_blocks animation-p _anim-items">
-                    <img alt="Experiments" src="images/measure_kfdjvi3n46l2.svg" class="about_icons">
-                    <h3 class="columns_about_blocks_text">Эксперименты</h3>
-                    <p class="columns_about_blocks_text">Эксперименты на виртуальных роботах с применением имитационного моделирования</p>
-                </a>
-                <a href="https://unity.com/ru" class="columns_about_blocks animation-p _anim-items">
-                    <img alt="Unity" src="images/icons8-unity-100.svg" class="about_icons">
-                    <h3 class="columns_about_blocks_text">Unity</h3>
-                    <p class="columns_about_blocks_text">Платформа Unity для имитации поведения мобильной робототехнической системы</p>
-                </a>
-                <a href="https://github.com/GrimDarkTech/RSMADocs" class="columns_about_blocks animation-p _anim-items">
-                    <img alt="Documents" src="images/document_azulrurbqkq2.svg" class="about_icons">
-                    <h3 class="columns_about_blocks_text">Документация</h3>
-                    <p class="columns_about_blocks_text">Техническая документация на русском и английском языках</p>
-                </a>
+                <template data-repeat="page.features.items" data-as="f">
+                    <a href="{{f.href}}" class="columns_about_blocks animation-p _anim-items">
+                        <img alt="{{f.alt}}" src="{{root}}{{f.icon}}" class="about_icons">
+                        <h3 class="columns_about_blocks_text">{{f.title}}</h3>
+                        <p class="columns_about_blocks_text">{{f.text}}</p>
+                    </a>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="about_rsma" id="about_rsma">
         <div class="container">
-            <h2 class="container__title">Почему РСМА?</h2>
-            <p class="about_rsma_p">Данный пакет представляет собой решение, позволяющее существенно сократить затраты на разработку робототехники.</p>
-            <p class="about_rsma_p">Создание виртуальной модели робота позволяет проводить тестирование и отладку без необходимости использования реальных материалов и оборудования, что значительно снижает расходы на эксперименты, ремонт и обслуживание.</p>
-            <p class="about_rsma_p">Кроме того, использование данного пакета ускоряет процесс разработки, так как моделирование робота позволяет предсказать взаимодействие всех его частей и компонентов, что помогает избежать ошибок и ускоряет процесс создания рабочего прототипа.</p>
+            <h2 class="container__title">{{page.why.title}}</h2>
+            <template data-repeat="page.why.paragraphs" data-as="p">
+                <p class="about_rsma_p">{{p}}</p>
+            </template>
             <div class="about_rsma_container_media">
-                <a class="about_rsma_media" onclick="openVideo(1)">
-                    <img alt="video 1" src="images/Video1.png" class="about_rsma_img">
-                </a>
-                <a class="about_rsma_media" onclick="openVideo(2)">
-                    <img alt="video 2" src="images/Video2.png" class="about_rsma_img">
-                </a>
-            <div class="container_video" id="container_video1">
-                <button class="cross" onclick="closeVideo(1)"><img alt="X" src="images/cross_mr3w4khsljuu.svg"></button>                
-                <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="container_video" id="container_video2">
-                <button class="cross" onclick="closeVideo(2)"><img alt="X" src="images/cross_mr3w4khsljuu.svg"></button>
-                <iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/6RUCidE1Mj8?si=OSBktqudtggU77Vk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <template data-repeat="page.why.videos" data-as="v">
+                    <a class="about_rsma_media" onclick="openVideo({{v.id}})">
+                        <img alt="{{v.thumbAlt}}" src="{{root}}{{v.thumb}}" class="about_rsma_img">
+                    </a>
+                </template>
+                <template data-repeat="page.why.videos" data-as="v">
+                    <div class="container_video" id="container_video{{v.id}}">
+                        <button class="cross" onclick="closeVideo({{v.id}})"><img alt="X" src="{{root}}images/cross_mr3w4khsljuu.svg"></button>
+                        <iframe id="video{{v.id}}" width="560" height="315" src="{{v.src}}" data-src="{{v.src}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
-
     <section class="tariff" id="tariff">
         <div class="container">
-            <h2 class="container__title">Тарифы</h2>
+            <h2 class="container__title">{{page.tariff.title}}</h2>
             <div>
                 <table>
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="tariff_th_title_h">Basic</th>
-                            <th class="tariff_th_title_h">Standart</th>
-                            <th class="tariff_th_title_h">Premium</th>
+                            <th class="tariff_th_title_h">{{page.tariff.columns.0}}</th>
+                            <th class="tariff_th_title_h">{{page.tariff.columns.1}}</th>
+                            <th class="tariff_th_title_h">{{page.tariff.columns.2}}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>Механические соединения</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Микроконтроллеры</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Протоколы передачи данных</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Светодиоды</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Электродвигатели</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Драйвер электродвигателя</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Дальномеры</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Текстовые дисплеи</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Сервоприводы</th>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Шаговые двигатели</th>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>3D-модели узлов роботов</th>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Энкодер, ДУС</th>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Устройства ввода данных</th>
-                            <td></td>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Датчик освещенности</th>
-                            <td></td>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Всенаправленные кроеса</th>
-                            <td></td>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Концевые выключатели</th>
-                            <td></td>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
-                        <tr>
-                            <th>Готовые примеры роботов</th>
-                            <td></td>
-                            <td></td>
-                            <td><img alt="Да" src="images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
-                        </tr>
+                        <template data-repeat="page.tariff.rows" data-as="row">
+                            <tr>
+                                <th>{{row.name}}</th>
+                                <td data-if="row.basic"><img alt="Да" src="{{root}}images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
+                                <td data-if="row.standart"><img alt="Да" src="{{root}}images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
+                                <td data-if="row.premium"><img alt="Да" src="{{root}}images/tick_vlltchoso6eq.svg" class="tariff_img"></td>
+                            </tr>
+                        </template>
                     </tbody>
                 </table>
                 <div class="table_title_container">
                     <h3 class="tariff_th_title_h tariff_th_title_h_th"></h3>
-                    <a href="Tariff/index.html"><button class="button" onclick="addStorage('basic')">Подробнее</button></a>
-                    <a href="Tariff/index.html"><button class="button" onclick="addStorage('standart')">Подробнее</button></a>
-                    <a href="Tariff/index.html"><button class="button" onclick="addStorage('premium')">Подробнее</button></a>
+                    <template data-repeat="page.tariff.tiers" data-as="t">
+                        <a href="Tariff/index.html"><button class="button" onclick="addStorage('{{t.id}}')">{{page.tariff.detailButton}}</button></a>
+                    </template>
                 </div>
-                <div id="containerForAdapt" >
-                    <a href="Tariff/index.html"><button id="buttonForAdapt" class="button" onclick="addStorage('basic')">Подробнее</button></a>
+                <div id="containerForAdapt">
+                    <a href="Tariff/index.html"><button id="buttonForAdapt" class="button" onclick="addStorage('basic')">{{page.tariff.detailButton}}</button></a>
                 </div>
             </div>
         </div>
@@ -244,11 +125,11 @@
 
     <section class="contacts" id="contacts">
         <div class="container">
-            <h2 class="container__title">Контакты</h2>
-            <p>ООО "ГРИМДАРК ТЕХНОЛОГИИ"</p>
-            <p>ИНН/ОГРН 6452150972/1236400001166</p>
-            <p>Потча: grimdark.tech@yandex.ru</p>
-            <p class="contacts_fond_p">Проект выполнен при поддержке <a class="contacts_fond_a" href="https://fasie.ru/">«Фонда содействия инновациям»</a> в рамках федерального проекта <a class="contacts_fond_a" href="https://univertechpred.ru/">«Платформа университетского технологического предпринимательства»</a>.</p>
+            <h2 class="container__title">{{page.contacts.title}}</h2>
+            <template data-repeat="page.contacts.lines" data-as="line">
+                <p>{{line}}</p>
+            </template>
+            <p class="contacts_fond_p" data-html="page.contacts.note"></p>
         </div>
     </section>
 
@@ -256,31 +137,24 @@
         <div class="container">
             <div class="parallax_footer_logo">
                 <div class="footer_container_logo">
-                    <a href="https://fasie.ru/">
-                        <img class="logo-a__Found" src="images/logo_new.png" alt="Foundation for the Promotion of Innovation">
+                    <a href="{{site.foundationUrl}}">
+                        <img class="logo-a__Found" src="{{root}}{{site.assets.foundationLogo}}" alt="{{site.assets.foundationAlt}}">
                     </a>
                     <a href="#">
-                        <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
-                    </a>  
-                </div>                        
+                        <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
+                    </a>
+                </div>
                 <div class="container_logo_footer">
-                    <a href="https://vk.com/grimdarktech" >
-                        <img src="images/vk_reproductor_2ow5urjj3v8n.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://www.youtube.com/@robotsimulationmodelingass5106" >
-                        <img src="images/youtube_7sjpksvhtoug.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://dzen.ru/id/63dad577f40d254317bf3e77" >
-                        <img src="images/yandex-zen.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://t.me/llc_grimdark" >
-                        <img src="images/telegram_1e4i1v42i3rw.svg" alt="Company" class="logo_footer">
-                    </a>
+                    <template data-repeat="site.socials" data-as="s">
+                        <a href="{{s.url}}">
+                            <img src="{{root}}{{s.icon}}" alt="{{s.label}}" class="logo_footer">
+                        </a>
+                    </template>
                 </div>
             </div>
             <div class="container_footer_text">
-                <p class="footer__copyright">© 2022-2023 ООО "Гримдарк технологии"</p>
-                <a href="#" class="footer_link">О компании</a>
+                <p class="footer__copyright">{{site.footer.copyright}}</p>
+                <a href="{{site.footer.companyLink.href}}" class="footer_link">{{site.footer.companyLink.label}}</a>
             </div>
         </div>
     </footer>

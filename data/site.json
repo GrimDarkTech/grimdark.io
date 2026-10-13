@@ -1,0 +1,44 @@
+{
+  "domain": "cyberhype.ru",
+  "company": {
+    "legalName": "ООО \"КИБЕРХАЙП\"",
+    "copyrightName": "ООО \"КИБЕРХАЙП\"",
+    "brand": "Cyberhype",
+    "inn": "6453181067",
+    "ogrn": "645301001",
+    "email": "usachevava@gmail.com"
+  },
+  "project": {
+    "abbr": "DS-01",
+    "abbrRu": "ДС-01",
+    "name": "Автономная зарядная станция для БПЛА",
+    "heroWords": [
+      { "letter": "", "word": "Автономные станции для беспилотных аппаратов" }
+    ]
+  },
+  "assets": {
+    "favicon": "images/Logo_company.png",
+    "companyLogo": "images/Logo_company.png",
+    "companyLogoAlt": "Cyberhype",
+    "foundationLogo": "images/logo_new.png",
+    "foundationAlt": "Foundation for the Promotion of Innovation"
+  },
+  "nav": [
+    { "label": "О станции", "href": "index.html#about" },
+    { "label": "Конфигурации", "href": "index.html#tariff" },
+    { "label": "Контакты", "href": "index.html#contacts" }
+  ],
+  "socials": [
+  ],
+  "foundationUrl": "https://fasie.ru/",
+  "footer": {
+    "copyright": "© 2026-2027 {{site.company.copyrightName}}",
+    "companyLink": { "label": "О компании", "href": "#" }
+  },
+  "meta": {
+    "home": { "title": "Автономная зарядная станция для БПЛА {{site.project.abbr}}" },
+    "about": { "title": "Архитектура и особенности автономной зарядной станции ДС-01" },
+    "tariffs": { "title": "Конфигурации и характеристики станции {{site.project.abbr}}" },
+    "terms": { "title": "Правила пользования сайтом" }
+  }
+}

@@ -5,92 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Преимущества использования 3D-моделей и имитационного моделирования при разработке мобильных роботов</title>
-    <link rel="icon" href="images/Logo_company.png">
+    <title>{{site.meta.about.title}}</title>
+    <link rel="icon" href="{{root}}{{site.assets.favicon}}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_adaptation.css">
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/gallery.js"></script>
 </head>
-<body>
+<body data-page="about" data-root="../">
     <header class="header">
         <div class="container">
             <div class="header_logo">
                 <a href="#">
-                    <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
-                </a>            
+                    <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
+                </a>
                 <div class="header_menu">
                     <div class="menu_menu-burger">
                         <span></span>
                     </div>
                     <nav class="header-menu__body">
                         <ul class="header-menu__list">
-                            <li><a href="../index.html#about" class="header-menu__link">О продукте</a></li>
-                            <li><a href="../index.html#tariff" class="header-menu__link">Тарифы</a></li>
-                            <li><a href="../index.html#contacts" class="header-menu__link">Контакты</a></li>
+                            <template data-repeat="site.nav" data-as="n">
+                                <li><a href="{{root}}{{n.href}}" class="header-menu__link">{{n.label}}</a></li>
+                            </template>
                         </ul>
                     </nav>
                 </div>
-            </div>            
+            </div>
         </div>
     </header>
 
-    <section class="about_models" id="about_models">
-        <div class="container">
-            <h2 class="container__title">3D-модели</h2>
-            <p>В процессе проектирования робота 3D-модели позволяют создавать и визуализировать концепции до их физической реализации.</p>    
-            <p>Применение моделей при разработке позволяет снизить затраты на материалы и оборудование.</p>
-            <p>RSMA позволяет собрать цифровой двойник робота из созданных в САПР 3D-моделей, запрограммировать и испытать на виртуальном полигоне.</p>
-            <p>Поддерживаемые файловые форматы 3D-моделей: OBJ, FBX, DAE, DXF, STL</p>
-        </div>
-    </section>
-    
-    <section class="about_experiments" id="about_experiments">
-        <div class="container">
-            <h2 class="container__title">Эксперименты на виртуальных роботах</h2>
-            <p>Применение имитационного моделирования в экспериментах на виртуальных роботах:</p>
-            <ul style="list-style-type:disc">
-                <li>ускоряет опыты;</li>
-                <li>снижает затраты на ремонт и обслуживание;</li>
-                <li>позволяет проводить несколько экспериментов одновременно;</li>
-                <li>повышает качество и безопасность роботов;</li>
-            </ul>
-            <p>Комбинирование вышеописанных подходов позволяет:</p>
-            <ul style="list-style-type:disc">
-                <li>проводить тесты и анализировать поведение мобильных платформ при различных условиях без необходимости физического присутствия робота;</li>
-                <li>обнаруживать потенциальные проблемы до запуска производства и начала продаж;</li>
-                <li>обучать операторов и программистов;</li>
-                <li>наглядно демонстрировать возможности робототехнических устройств;</li>
-                <li>тестировать и оптимизировать алгоритмы управления и навигации мобильных роботов;</li>
-                <li>повысить производительность и надежность робототехнических комплексов.</li>
-            </ul>
-        </div>
-    </section>
+    <template data-repeat="page.sections" data-as="s">
+        <section class="{{s.id}}" id="{{s.id}}">
+            <div class="container">
+                <h2 class="container__title">{{s.title}}</h2>
+                <template data-repeat="s.items" data-as="it">
+                    <p data-if="it.type === 'p'" data-html="it.html"></p>
+                    <ul data-if="it.type === 'ul'" style="list-style-type:disc">
+                        <template data-repeat="it.items" data-as="li">
+                            <li>{{li}}</li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </section>
+    </template>
 
     <section class="pictures" id="pictures">
         <div class="container">
             <div class="gallery">
-                <button class="arrow" onclick="scrollGallery('left')"><img id="left" alt="<" src="images/arrow.svg"></button>
+                <button class="arrow" onclick="scrollGallery('left')"><img id="left" alt="<" src="{{root}}images/arrow.svg"></button>
                 <div id="image1" class="image_container"></div>
                 <div class="container_front_image">
                     <div id="image2" class="image_container front_image"></div>
                 </div>
                 <div id="image3" class="image_container"></div>
-                <button class="arrow" onclick="scrollGallery('right')"><img id="right" alt=">" src="images/arrow.svg"></button>
+                <button class="arrow" onclick="scrollGallery('right')"><img id="right" alt=">" src="{{root}}images/arrow.svg"></button>
             </div>
             <div class="gallery_adaption">
                 <div class="viewport">
-                    <ul class="list">
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                      <li class="item"></li>
-                    </ul>
-                  </div>
+                    <ul class="list"></ul>
+                </div>
             </div>
         </div>
     </section>
@@ -99,34 +75,26 @@
         <div class="container">
             <div class="parallax_footer_logo">
                 <div class="footer_container_logo">
-                    <a href="https://fasie.ru/">
-                        <img class="logo-a__Found" src="images/logo_new.png" alt="Foundation for the Promotion of Innovation">
+                    <a href="{{site.foundationUrl}}">
+                        <img class="logo-a__Found" src="{{root}}{{site.assets.foundationLogo}}" alt="{{site.assets.foundationAlt}}">
                     </a>
                     <a href="#">
-                        <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
-                    </a>  
-                </div>                        
+                        <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
+                    </a>
+                </div>
                 <div class="container_logo_footer">
-                    <a href="https://vk.com/grimdarktech" >
-                        <img src="images/vk_reproductor_2ow5urjj3v8n.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://www.youtube.com/@robotsimulationmodelingass5106" >
-                        <img src="images/youtube_7sjpksvhtoug.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://dzen.ru/id/63dad577f40d254317bf3e77" >
-                        <img src="images/yandex-zen.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://t.me/llc_grimdark" >
-                        <img src="images/telegram_1e4i1v42i3rw.svg" alt="Company" class="logo_footer">
-                    </a>
+                    <template data-repeat="site.socials" data-as="s">
+                        <a href="{{s.url}}">
+                            <img src="{{root}}{{s.icon}}" alt="{{s.label}}" class="logo_footer">
+                        </a>
+                    </template>
                 </div>
             </div>
             <div class="container_footer_text">
-                <p class="footer__copyright">© 2022-2023 ООО "Гримдарк технологии"</p>
-                <a href="#" class="footer_link">О компании</a>
+                <p class="footer__copyright">{{site.footer.copyright}}</p>
+                <a href="{{site.footer.companyLink.href}}" class="footer_link">{{site.footer.companyLink.label}}</a>
             </div>
         </div>
-        <script defer src="js/script.js"></script>
     </footer>
 </body>
 </html>

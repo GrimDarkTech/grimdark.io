@@ -1,0 +1,87 @@
+{
+  "features": {
+    "title": "Особенности продукта",
+    "items": [
+      {
+        "href": "More_information/index.html#about_station",
+        "icon": "images/3d_model_tgfzi0g6n25x.svg",
+        "alt": "Station",
+        "title": "Конструкция",
+        "text": "Прочный каркас и надежные линейные приводы манипулятора"
+      },
+      {
+        "href": "More_information/index.html#about_features",
+        "icon": "images/measure_kfdjvi3n46l2.svg",
+        "alt": "Automation",
+        "title": "Автоматизация",
+        "text": "Автоматическая замена аккумуляторов и точная посадка по маркерам"
+      },
+      {
+        "href": "https://www.raspberrypi.com/",
+        "icon": "images/icons8-unity-100.svg",
+        "alt": "Hardware",
+        "title": "Электроника",
+        "text": "Raspberry Pi 5, ESP32, модули LoRa32 и беспроводная подача питания"
+      },
+      {
+        "href": "https://github.com/GrimDarkTech/RSMADocs",
+        "icon": "images/document_azulrurbqkq2.svg",
+        "alt": "Documents",
+        "title": "Документация",
+        "text": "Техническая документация и схемы комплекса"
+      }
+    ]
+  },
+  "why": {
+    "title": "Почему {{site.project.abbrRu}}?",
+    "paragraphs": [
+      "Станция ДС-01 представляет собой комплексное решение для создания полностью автономной инфраструктуры полетов беспилотных аппаратов.",
+      "Использование автоматической замены аккумуляторов позволяет дронам выполнять задачи в круглосуточном режиме без необходимости вмешательства оператора для перезарядки или обслуживания.",
+      "Универсальная архитектура посадочной платформы и настраиваемое навесное оборудование обеспечивают совместимость с различными типами БПЛА и аккумуляторными сборками от 3S до 6S."
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "thumb": "images/Video1.png",
+        "thumbAlt": "video 1",
+        "src": "https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW"
+      },
+      {
+        "id": 2,
+        "thumb": "images/Video2.png",
+        "thumbAlt": "video 2",
+        "src": "https://www.youtube.com/embed/6RUCidE1Mj8?si=OSBktqudtggU77Vk"
+      }
+    ]
+  },
+  "tariff": {
+    "title": "Конфигурации станции",
+    "columns": ["Mini", "Standart"],
+    "rows": [
+      { "name": "Несущий стальной каркас", "mini": true, "standart": true},
+      { "name": "Система освещения", "mini": true, "standart": true},
+      { "name": "Модуль связи LoRa32", "mini": true, "standart": true},
+      { "name": "Манипулятор с линейными приводами", "mini": true, "standart": true},
+      { "name": "Бортовой вычислитель", "mini": true, "standart": true},
+      { "name": "Система технического зрения", "mini": true, "standart": true},
+      { "name": "Беспроводная подзарядка на борту", "mini": true, "standart": true},
+      { "name": "Поддержка бортов от 60 до 120 кг", "mini": false, "standart": true},
+      { "name": "Автоматическая заправка жидкостью", "mini": false, "standart": true},
+      { "name": "Центровочный механизм фиксации БПЛА", "mini": false, "standart": true}
+    ],
+    "detailButton": "Подробнее",
+    "tiers": [
+      { "id": "mini", "label": "Mini" },
+      { "id": "standart", "label": "Standart" }
+    ]
+  },
+  "contacts": {
+    "title": "Контакты",
+    "lines": [
+      "{{site.company.legalName}}",
+      "ИНН/ОГРН {{site.company.inn}}/{{site.company.ogrn}}",
+      "Почта: {{site.company.email}}"
+    ],
+    "note": "Проект выполнен при поддержке <a class=\"contacts_fond_a\" href=\"https://fasie.ru/\">«Фонда содействия инновациям»</a> в рамках федерального проекта <a class=\"contacts_fond_a\" href=\"https://univertechpred.ru/\">«Платформа университетского технологического предпринимательства»</a>."
+  }
+}

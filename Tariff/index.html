@@ -5,39 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Среда имитационного моделирования мобильных роботов RSMA</title>
-    <link rel="icon" href="images/Logo_company.png">
-    <link rel="stylesheet" href="css/style.css">    
+    <title>{{site.meta.tariffs.title}}</title>
+    <link rel="icon" href="{{root}}{{site.assets.favicon}}">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_adaptation.css">
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/tariffs.js"></script>
 </head>
 
-<body>
+<body data-page="tariffs" data-root="../">
     <header class="header">
         <div class="container">
             <div class="header_logo">
                 <a href="#">
-                    <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
-                </a>            
+                    <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
+                </a>
                 <div class="header_menu">
                     <div class="menu_menu-burger">
                         <span></span>
                     </div>
                     <nav class="header-menu__body">
                         <ul class="header-menu__list">
-                            <li><a href="../index.html#about" class="header-menu__link">О продукте</a></li>
-                            <li><a href="../index.html#tariff" class="header-menu__link">Тарифы</a></li>
-                            <li><a href="../index.html#contacts" class="header-menu__link">Контакты</a></li>
+                            <template data-repeat="site.nav" data-as="n">
+                                <li><a href="{{root}}{{n.href}}" class="header-menu__link">{{n.label}}</a></li>
+                            </template>
                         </ul>
                     </nav>
                 </div>
-            </div>            
+            </div>
         </div>
         <div class="header_tariff">
             <div class="container">
                 <div class="header_tariff_title_container">
-                    <button class="header_tariff_title" onclick="openTariff('basic')"><h2 id="title_Basic" class="header_tariff_title_h">Basic</h2></button>
-                    <button class="header_tariff_title" onclick="openTariff('standart')"><h2 id="title_Standart" class="header_tariff_title_h">Standart</h2></button>
-                    <button class="header_tariff_title" onclick="openTariff('premium')"><h2 id="title_Premium" class="header_tariff_title_h">Premium</h2></button>
+                    <template data-repeat="page.tiers" data-as="t">
+                        <button class="header_tariff_title" onclick="openTariff('{{t.id}}')"><h2 id="title_{{t.id}}" class="header_tariff_title_h">{{t.label}}</h2></button>
+                    </template>
                 </div>
             </div>
         </div>
@@ -45,234 +48,65 @@
 
     <section class="tariff" id="tariff">
         <div class="container">
-            <h2 class="container__title">Характеристики</h2>
-            <div id="tariff_container_Basic">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th colspan="2">Механические соединения</th>
-                            <td colspan="2"><p>8000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Микроконтроллеры</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Протоколы передачи данных</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Светодиоды</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Электродвигатели</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Драйвер электродвигателя</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Дальномеры</th>
-                            <td colspan="2"><p>3500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Текстовые дисплеи</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Сервоприводы</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th>Покупка:</th>
-                            <td><p>85 000 руб</p></td>
-                            <th>Подписка:</th>
-                            <td><p>10 200 руб</p></td>
-                        </tr>
-                    </tbody>
-                </table>                
-            </div>
-            <div id="tariff_container_Standart">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th colspan="2">Механические соединения</th>
-                            <td colspan="2"><p>8000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Микроконтроллеры</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Протоколы передачи данных</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Светодиоды</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Электродвигатели</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Драйвер электродвигателя</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Дальномеры</th>
-                            <td colspan="2"><p>3500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Текстовые дисплеи</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Сервоприводы</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Шаговые двигатели</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">3D-модели узлов роботов</th>
-                            <td colspan="2"><p>6500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Энкодер, ДУС</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th>Покупка:</th>
-                            <td><p>113 750 руб</p></td>
-                            <th>Подписка:</th>
-                            <td><p>13 650 руб</p></td>
-                        </tr>
-                    </tbody>
-                </table>                
-            </div>
-            <div id="tariff_container_Premium">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th colspan="2">Механические соединения</th>
-                            <td colspan="2"><p>8000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Микроконтроллеры</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Протоколы передачи данных</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Светодиоды</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Электродвигатели</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Драйвер электродвигателя</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Дальномеры</th>
-                            <td colspan="2"><p>3500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Текстовые дисплеи</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Сервоприводы</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Шаговые двигатели</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">3D-модели узлов роботов</th>
-                            <td colspan="2"><p>6500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Энкодер, ДУС</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Устройства ввода данных</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Датчик освещенности</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Всенаправленные кроеса</th>
-                            <td colspan="2"><p>5000 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Концевые выключатели</th>
-                            <td colspan="2"><p>2500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Готовые примеры роботов</th>
-                            <td colspan="2"><p>1500 руб</p></td>
-                        </tr>
-                        <tr>
-                            <th>Покупка:</th>
-                            <td><p>148 750 руб</p></td>
-                            <th>Подписка:</th>
-                            <td><p>17 850 руб</p></td>      
-                        </tr>
-                    </tbody>
-                </table>                
-            </div>
+            <h2 class="container__title">{{page.title}}</h2>
+            <template data-repeat="page.tiers" data-as="t">
+                <div id="tariff_container_{{t.id}}" hidden>
+                    <table>
+                        <tbody>
+                            <template data-repeat="t.rows" data-as="row">
+                                <tr>
+                                    <th colspan="2">{{row.name}}</th>
+                                    <td colspan="2"><p>{{row.price}}</p></td>
+                                </tr>
+                            </template>
+                            <tr>
+                                <th>{{page.purchaseLabel}}</th>
+                                <td><p>{{t.purchase}}</p></td>
+                                <th>{{page.subscriptionLabel}}</th>
+                                <td><p>{{t.subscription}}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </template>
             <div class="table_button_container">
-                <a href="#feedback"><button class="button" onclick="getFeedback()">Отправить заявку</button></a>
+                <a href="#feedback"><button class="button" onclick="getFeedback()">{{page.orderButton}}</button></a>
             </div>
         </div>
     </section>
-
     <section class="feedback" id="feedback">
         <div class="container">
-            <h2 class="container__title">Заявка на приобретение</h2>
+            <h2 class="container__title">{{page.feedback.title}}</h2>
             <form id="form_feedback">
                 <div class="form_container_items">
-                    <label for="form_tariff_title">Название тарифа:</label>
+                    <label for="form_tariff_title">{{page.feedback.labels.tariff}}</label>
                     <select class="input_field" id="form_tariff_title" name="form_tariff_title">
-                        <option value="basic">Basic</option>
-                        <option value="standart">Standart</option>
-                        <option value="premium">Premium</option>
+                        <option value="basic">{{page.tiers.0.label}}</option>
+                        <option value="standart">{{page.tiers.1.label}}</option>
+                        <option value="premium">{{page.tiers.2.label}}</option>
                     </select>
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_purchase_or_subscription">Покупка или подписка:</label>
+                    <label for="form_tariff_purchase_or_subscription">{{page.feedback.labels.deal}}</label>
                     <select class="input_field" id="form_tariff_purchase_or_subscription" name="form_tariff_purchase_or_subscription">
-                        <option value="purchase">Покупка</option>
-                        <option value="subscription">Подписка</option>
+                        <option value="purchase">{{page.feedback.dealOptions.0.label}}</option>
+                        <option value="subscription">{{page.feedback.dealOptions.1.label}}</option>
                     </select>
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_name">Ваше Имя: *</label>
+                    <label for="form_tariff_name">{{page.feedback.labels.name}}</label>
                     <input class="input_field" id="form_tariff_name" required>
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_email">Ваш e-mail: *</label>
+                    <label for="form_tariff_email">{{page.feedback.labels.email}}</label>
                     <input type="email" class="input_field" id="form_tariff_email" required>
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_phone">Ваш телефон: *</label>
-                    <input class="input_field form_tariff_phone" id="form_tariff_phone" placeholder="+7(xxx) xxx-xxxx" required>
+                    <label for="form_tariff_phone">{{page.feedback.labels.phone}}</label>
+                    <input class="input_field form_tariff_phone" id="form_tariff_phone" placeholder="{{page.feedback.phonePlaceholder}}" required>
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_comment">Комментарий:</label>
+                    <label for="form_tariff_comment">{{page.feedback.labels.comment}}</label>
                     <textarea class="input_field" id="form_tariff_comment"></textarea>
                 </div>
                 <div class="form_container_items">
@@ -280,11 +114,11 @@
                     <input class="input_field" id="form_tariff_number">
                 </div>
                 <div class="form_container_items">
-                    <label for="form_tariff_confirmation"><input id="form_tariff_confirmation" type="checkbox" required> Подтверждаю своё согласие с <a href="../Terms_of_use_of_the_site/index.html" id="confirmation_a">правилами пользования сайтом</a> *</label>
+                    <label for="form_tariff_confirmation"><input id="form_tariff_confirmation" type="checkbox" required> {{page.feedback.labels.confirmationPrefix}}<a href="{{root}}{{page.feedback.termsHref}}" id="confirmation_a">{{page.feedback.labels.confirmationLink}}</a>{{page.feedback.labels.confirmationSuffix}}</label>
                 </div>
                 <div class="form_buttons">
-                    <input class="button button_form" type="reset" value="Очистить">
-                    <input class="button button_form" type="button" value="Отправить" onclick="send()">
+                    <input class="button button_form" type="reset" value="{{page.feedback.labels.reset}}">
+                    <input class="button button_form" type="button" value="{{page.feedback.labels.submit}}" onclick="send()">
                 </div>
             </form>
         </div>
@@ -294,35 +128,27 @@
         <div class="container">
             <div class="parallax_footer_logo">
                 <div class="footer_container_logo">
-                    <a href="https://fasie.ru/">
-                        <img class="logo-a__Found" src="images/logo_new.png" alt="Foundation for the Promotion of Innovation">
+                    <a href="{{site.foundationUrl}}">
+                        <img class="logo-a__Found" src="{{root}}{{site.assets.foundationLogo}}" alt="{{site.assets.foundationAlt}}">
                     </a>
                     <a href="#">
-                        <img class="logo-a__Company" src="images/Logo_company.png" alt="GrimDark">
-                    </a>  
-                </div>                        
+                        <img class="logo-a__Company" src="{{root}}{{site.assets.companyLogo}}" alt="{{site.assets.companyLogoAlt}}">
+                    </a>
+                </div>
                 <div class="container_logo_footer">
-                    <a href="https://vk.com/grimdarktech" >
-                        <img src="images/vk_reproductor_2ow5urjj3v8n.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://www.youtube.com/@robotsimulationmodelingass5106" >
-                        <img src="images/youtube_7sjpksvhtoug.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://dzen.ru/id/63dad577f40d254317bf3e77" >
-                        <img src="images/yandex-zen.svg" alt="Company" class="logo_footer">
-                    </a>
-                    <a href="https://t.me/llc_grimdark" >
-                        <img src="images/telegram_1e4i1v42i3rw.svg" alt="Company" class="logo_footer">
-                    </a>
+                    <template data-repeat="site.socials" data-as="s">
+                        <a href="{{s.url}}">
+                            <img src="{{root}}{{s.icon}}" alt="{{s.label}}" class="logo_footer">
+                        </a>
+                    </template>
                 </div>
             </div>
             <div class="container_footer_text">
-                <p class="footer__copyright">© 2022-2023 ООО "Гримдарк технологии"</p>
-                <a href="#" class="footer_link">О компании</a>
+                <p class="footer__copyright">{{site.footer.copyright}}</p>
+                <a href="{{site.footer.companyLink.href}}" class="footer_link">{{site.footer.companyLink.label}}</a>
             </div>
         </div>
-    </footer>    
-    <script src="js/script.js"></script>    
+    </footer>
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </body>

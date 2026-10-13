@@ -1,0 +1,53 @@
+{
+  "title": "Модули и компоненты станции",
+  "priceNote": "руб",
+  "tiers": [
+    {
+      "id": "modules",
+      "label": "Базовые модули",
+      "rows": [
+        { "name": "Несущий стальной каркас", "price": "15000 руб" },
+        { "name": "Блок питания", "price": "7000 руб" },
+        { "name": "Модуль освещения (ESP32 + реле)", "price": "4500 руб" },
+        { "name": "Модуль связи LoRa32 / Wi-Fi", "price": "3500 руб" },
+        { "name": "Зарядное устройство ToolkitRC C6", "price": "6000 руб" },
+        { "name": "Силовые разъемы EC5 и D-Sub", "price": "2000 руб" },
+        { "name": "Манипулятор (линейные приводы)", "price": "25000 руб" },
+        { "name": "Бортовой вычислитель Raspberry Pi 5", "price": "14000 руб" }
+      ],
+      "purchase": "150 000 руб",
+      "subscription": "18 000 руб"
+    }
+  ],
+  "purchaseLabel": "Покупка:",
+  "subscriptionLabel": "Подписка:",
+  "orderButton": "Отправить заявку",
+  "feedback": {
+    "title": "Заявка на приобретение",
+    "labels": {
+      "tariff": "Конфигурация:",
+      "deal": "Тип поставки:",
+      "name": "Ваше Имя: *",
+      "email": "Ваш e-mail: *",
+      "phone": "Ваш телефон: *",
+      "comment": "Комментарий:",
+      "captcha": "Введите число",
+      "captchaSuffix": "*",
+      "confirmationPrefix": "Подтверждаю своё согласие с ",
+      "confirmationLink": "правилами пользования сайтом",
+      "confirmationSuffix": " *",
+      "reset": "Очистить",
+      "submit": "Отправить"
+    },
+    "dealOptions": [
+      { "value": "purchase", "label": "Покупка" },
+      { "value": "subscription", "label": "Аренда / Подписка" }
+    ],
+    "phonePlaceholder": "+7(xxx) xxx-xxxx",
+    "termsHref": "Terms_of_use_of_the_site/index.html",
+    "messages": {
+      "sent": "Заявка отправлена",
+      "captchaError": "Введите число"
+    }
+  }
+}
