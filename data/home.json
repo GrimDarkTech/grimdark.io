@@ -24,7 +24,7 @@
         "text": "Raspberry Pi 5, ESP32, модули LoRa32 и беспроводная подача питания"
       },
       {
-        "href": "https://github.com/GrimDarkTech/RSMADocs",
+        "href": "https://docs.px4.io/main/en/advanced_features/preclands",
         "icon": "images/document_azulrurbqkq2.svg",
         "alt": "Documents",
         "title": "Документация",
@@ -40,18 +40,6 @@
       "Универсальная архитектура посадочной платформы и настраиваемое навесное оборудование обеспечивают совместимость с различными типами БПЛА и аккумуляторными сборками от 3S до 6S."
     ],
     "videos": [
-      {
-        "id": 1,
-        "thumb": "images/Video1.png",
-        "thumbAlt": "video 1",
-        "src": "https://www.youtube.com/embed/Np0aAyV3sGs?si=LkTZyaG4lXqP2SEW"
-      },
-      {
-        "id": 2,
-        "thumb": "images/Video2.png",
-        "thumbAlt": "video 2",
-        "src": "https://www.youtube.com/embed/6RUCidE1Mj8?si=OSBktqudtggU77Vk"
-      }
     ]
   },
   "tariff": {

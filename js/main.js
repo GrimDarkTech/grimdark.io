@@ -12,14 +12,26 @@
 
     if (window.seamless) window.seamless.polyfill();
 
+    // Считаем ссылки на этот же документ (в т.ч. "index.html#about" на главной при адресе "/").
+    function isSameDocument(url) {
+      var target = url.pathname.replace(/index\.html$/, '');
+      var current = window.location.pathname.replace(/index\.html$/, '');
+      return target === current;
+    }
+
     links.forEach(function (element) {
       element.addEventListener('click', function (event) {
-        var href = element.getAttribute('href') || '';
-        if (href.charAt(0) !== '#') return;      // обычные ссылки (index.html#about) — не перехватываем
-        event.preventDefault();
+        var url;
+        try {
+          url = new URL(element.getAttribute('href') || '', window.location.href);
+        } catch (e) {
+          return;
+        }
+        if (!url.hash || !isSameDocument(url)) return; // другая страница — обычный переход
 
-        var section = document.getElementById(href.substring(1));
+        var section = document.getElementById(url.hash.slice(1));
         if (!section) return;
+        event.preventDefault();
 
         if (window.seamless) {
           window.seamless.scrollIntoView(section, {
